@@ -1,4 +1,4 @@
-* In shallow copy when we assign one object to other, the starting pointer of one object starts from the same memory location of other object*/
+/* In shallow copy when we assign one object to other, the starting pointer of one object starts from the same memory location of other object*/
 /*In deep copy we dynamically assign memory to the object and there is a change in it*/
 
 #include<stdlib.h>
