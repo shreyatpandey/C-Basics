@@ -1,0 +1,7 @@
+Q] How can we send data when its pointer? Is it good idea to send a pointer to another computer or server at first place?
+Ans:- A pointer is a local (as in the same PC) variable that holds the address of some object in the process' own memory space. 
+It doesn't even make sense to other processes inside the same machine, so there is no point in being able to send it to another computer.
+
+If you just want to know whether it is possible to send the pointer to other computers, indeed it is possible, but as I wrote before, it wouldn't make any sense. 
+(It is possible, because the address is just a number)
+
