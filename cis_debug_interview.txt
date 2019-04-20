@@ -19,7 +19,7 @@ populate (myitem);
 printf("info is :%d", myitem->info);
 }
 
-/*Rite solution*/
+/*Right solution*/
 struct mydata {
 int x:4;
 int y:4;
