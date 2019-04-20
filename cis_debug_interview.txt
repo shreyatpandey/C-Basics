@@ -1,0 +1,47 @@
+/*find the error in this code*/
+
+struct mydata {
+int x:4;
+int y:4;
+int data;
+int info;
+};
+struct mydata * populate (struct mydata *myitem) {
+myitem = (struct mydata *)malloc(sizeof(myitem)); /*here lies the error*/
+myitem->x = 0;
+myitem->y = 1;
+myitem->info = 5;
+}
+
+void main () {
+struct mydata *myitem = NULL;
+populate (myitem);
+printf("info is :%d", myitem->info);
+}
+
+/*Rite solution*/
+struct mydata {
+int x:4;
+int y:4;
+int data;
+int info;
+};
+struct mydata * populate (struct mydata *myitem) {
+myitem->x = 0;
+myitem->y = 1;
+myitem->info = 5;
+}
+
+void main () {
+struct mydata *myitem = NULL;
+myitem = (struct mydata *)malloc(sizeof(myitem)); /*here lies the error*/
+populate (myitem);
+printf("info is :%d", myitem->info);
+}
+
+/*Use backtrace command for it in gdb */
+
+
+
+
+
