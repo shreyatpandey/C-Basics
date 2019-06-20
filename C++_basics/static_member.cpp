@@ -2,20 +2,25 @@
 include<bits/stdc++.h>
 using namespace std;
 
-class Cisco
+class Practice
 {
     private:
         static int count;
     public:
     static void display()
     {
-        cout<<"Cisco"<<endl;
+        cout<<"practice"<<endl;
+    }
+    void display_1()
+    {
+     cout<<"practice_1"<<endl;   
     }
 };
 int Cisco::count=5;
 
 int main()
 {
-    Cisco::display();
+    Practice::display();
+    Practice::display_1(); //error here, need an object of the class of practice
     return 0;
 }
