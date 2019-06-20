@@ -18,7 +18,7 @@ class Practice
     }
 };
 int Practice::count=5;
-int Practice::count_1 ; //error here
+int Practice::count_1 = 2; //error here
 
 int main()
 {
