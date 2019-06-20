@@ -6,6 +6,7 @@ class Practice
 {
     private:
         static int count;
+        int count_1 ;
     public:
     static void display()
     {
@@ -17,6 +18,7 @@ class Practice
     }
 };
 int Practice::count=5;
+int Practice::count_1 ; //error here
 
 int main()
 {
