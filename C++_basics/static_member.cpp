@@ -16,11 +16,11 @@ class Practice
      cout<<"practice_1"<<endl;   
     }
 };
-int Cisco::count=5;
+int Practice::count=5;
 
 int main()
 {
     Practice::display();
-    Practice::display_1(); //error here, need an object of the class of practice
+    //Practice::display_1(); //error here, need an object of the class of practice
     return 0;
 }
