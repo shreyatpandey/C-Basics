@@ -7,7 +7,7 @@ int index;
 for (index = 0, ptr = ref; index < 4; index++, ptr++)
 {
   printf("%d %d\n", ref[index], *ptr); //same output :- 8 8, 4 4,0 0,2 2
-  printf("Address of each:%p\n",(void *)&ptr);
+  printf("Address of each:%p\n",(void *)&ptr); //%p means to print pointer address
 }
  return 0;
 }
