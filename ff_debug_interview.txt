@@ -1,0 +1,68 @@
+/*Q-1: Org-Code */
+#include <stdio.h>
+#include<string.h>
+unsigned sum(const unsigned char* input)
+{
+    unsigned result = 0;
+    for(int i=0;i<strlen(input);i++)
+    {
+        result += input[i] ;
+    }
+    return result;
+}
+/*Q-1: Mod-code*/
+#include <stdio.h>
+#include<string.h>
+
+unsigned sum(const unsigned char* input)
+{
+    unsigned result = 0;
+    for(int i=0;i<strlen(input);i++)
+    {
+        result = result*10 + input[i] - '0';
+    }
+    return result;
+}
+int main()
+{
+    const unsigned char* input = "456";
+    unsigned result = sum(input);
+    printf("result_is:%u\n",result);
+
+    return 0;
+}
+
+/*Q-2:Org-Code*/
+void delete_item(list l)
+{
+item *p;
+for(p=l.head;p != NULL;p=p->next)  //once you delete p, p->next would not make sense
+  free(p);
+ }
+
+/*Q-3:Org-Code */
+void file_read(File* src,File* dst,size_t bufsize)
+{
+char buf[bufsize]; //here is the error as bufsize has to be constant, can not be dynamically allocated */
+
+while(fgets(buf,bufsize,src)
+{
+  if(fputs(buf,dst) == EOF)
+  {
+    /* Some Code*/
+   }
+   }
+ }
+}
+/* when does the value differ */
+int value_one(int num)
+{
+  return (num/2);
+ }
+ int value_two(int num)
+ {
+  return (x>>1);
+  }
+ Value would differ when num is negative
+
+ 
