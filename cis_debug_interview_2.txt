@@ -76,7 +76,7 @@ typedef  struct node_
     struct node_ *ptr;
 } node_t;
 
-void add_node (node_t **head, int data)   /*Mod-2*/
+void add_node (node_t **head, int data)   /*Mod-3*/
 {
     node_t *temp;
     temp = (node_t *) malloc(sizeof(node_t)); 
@@ -104,13 +104,13 @@ void remove_node (node_t *head)
     {
         return;
     }
-    head = head->ptr; 
+    head->ptr = head->ptr->ptr; /*Mod-5*/ /*Output:- 9,3,2,1,0 : 9 still remains */
     return;
 }
 void show_nodes (node_t *head)
 {
     
-    while (head != NULL) /*Mod-3*/
+    while (head != NULL) /*Mod-4*/
     {            
         printf("\n %d", head->data);
         head = head->ptr;
