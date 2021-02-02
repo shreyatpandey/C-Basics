@@ -4,6 +4,9 @@ void Fruit()
   char * Input = "Hello World";
   free(Input);
  }
+ //Issue-Here:- munmap_chunk(): access to invalid pointer 
+ //Attempting to free an invalid pointer (a pointer to a memory block that was not allocated by calloc, malloc, or realloc) may affect subsequent allocation requests and cause errors.
+ //Solution: need to use strcpy() 
 
 /*Code-2*/
 void foo()
