@@ -6,7 +6,8 @@ void Fruit()
  }
  //Issue-Here:- munmap_chunk(): access to invalid pointer 
  //Attempting to free an invalid pointer (a pointer to a memory block that was not allocated by calloc, malloc, or realloc) may affect subsequent allocation requests and cause errors.
- //Solution: need to use strcpy() 
+ //Solution: need to use strcpy()
+ //Link:- https://stackoverflow.com/questions/29207663/munmap-chunk-error-in-c?rq=1
 
 /*Code-2*/
 void foo()
