@@ -1,3 +1,22 @@
+/*Code-1*/
+void Fruit()
+{
+  char * Input = "Hello World";
+  free(Input);
+ }
+
+/*Code-2*/
+void foo()
+{
+ static char* Input = (char*)malloc(30);
+ Input[0] = '\0';
+ free(Input);
+ Input = NULL;
+}
+foo();
+foo(); /*Issue-1: It would be here as you calling free on Null Pointer*/
+
+
 /*Code-3*/
 #include <bits/stdc++.h>
 using namespace std;
