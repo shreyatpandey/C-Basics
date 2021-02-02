@@ -1,0 +1,29 @@
+/*Code-3*/
+#include <bits/stdc++.h>
+using namespace std;
+
+const int SIZE = 31;
+
+int main()
+{
+    
+    int* data = (int*)malloc(SIZE);
+    for(unsigned int i= SIZE-1;i>=0;i--) /* Issue-1: unisgned int can never be negative and hence i>=0 is satisfied always and when i is negative it wraps around large positive 
+    value*/
+    {
+        *data = (i>>4) ;
+        data++;
+    }
+    free(data); /* Issue-2: when free() is called it would point to invalid pointer , does not where it is pointing at */ 
+    return 0;
+}
+
+//what if you use int instead of unsigned int
+for(int i= SIZE-1;i>=0;i--) /* Issue-1: No issue here*/
+    {
+        *data = (i>>4) ;
+        data++;
+    }
+    free(data); /* this free() will still have issue as it would be pointing to an invalid pointer*/
+    
+    
