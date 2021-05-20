@@ -17,6 +17,7 @@ void add_node (node_t *head, int data)
     }
     temp->data = data;
     temp->ptr = NULL;
+    /*
     if (head == NULL) 
     {
         head = temp; 
@@ -25,6 +26,17 @@ void add_node (node_t *head, int data)
     {          
         temp->ptr = head; 
         head = temp;
+    } 
+    */
+     if (*head == NULL) 
+    {
+        *head = temp; 
+    } 
+    else 
+    {          
+        node_t* temp1 = *head;
+        while ( temp1->ptr != NULL ) temp1 = temp1->ptr ;
+        temp1->ptr = temp ;
     } 
 
 }
